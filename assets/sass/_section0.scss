@@ -27,10 +27,46 @@ $size: 40vw;
             background-image: url("../img/door.jpg");
             background-size: 100% auto;
         }
+        .pencilMan {
+        	transition: opacity .5s;
+            @include component();
+            top: 19vh;
+            left: 16vw;
+            width: 10.5vw;
+            opacity: 0;
+        }
     }
     &:hover {
         .door {
             transform: rotateY(-45deg);
         }
+        .pencilMan {
+            opacity: 1;
+        }
     }
+}
+
+.blur {
+    @include component();
+    top: 0;
+    top: -10vh;
+    left: 45vw;
+    height: 100vh;
+    width: 50vw;
+}
+
+.textWrap {
+    @include component();
+    top: 15vh;
+    left: 65vw;
+    font-size: 2vh;
+    line-height: 3.5vh;
+    color: #333;
+}
+
+.gift {
+    @include component();
+    top: 40vh;
+    left: 61vw;
+    height: 18vw;
 }
