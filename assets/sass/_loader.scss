@@ -1,0 +1,43 @@
+#All {
+    opacity: 0;
+}
+
+#loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+    opacity: 0;
+    .dot {
+        // background: url(http://placehold.it/40x40);
+        background-color: #FFF;
+        opacity: 0.5;
+        width: 2vw;
+        height: 2vw;
+        display: inline-block;
+        border-radius: 50%;
+        margin: 3px;
+        border: 2px #2b4d66 solid;
+    }
+}
+
+#scrollDown {
+    display: block;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+    z-index: 999;
+    img {
+        background-color: #EC0462;
+        width: 50px;
+        height: 50px;
+        background-image: url("http://lempens-design.com/WD_IMAGES/GLOBAL/scrollDown.gif"),url("http://lempens-design.com/WD_IMAGES/GLOBAL/scrollDownHover.gif");
+        @include transition(all 0.5s cubic-bezier(.9, -0.43, .23, 1.24));
+        background-position: 0 0, 0 -50px;
+        background-repeat: no-repeat;
+    }
+    img.on {
+        background-position: 0 50px, 0 0;
+    }
+}
