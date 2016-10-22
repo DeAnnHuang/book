@@ -1,8 +1,9 @@
 .main {
     @include component();
-    top: 6vh;
-    left: 4vw;
-    height: 70vh;
+    top: 8vh;
+    left: 5vw;
+    height: 76vh;
+    z-index: 5;
 }
 
 $size: 40vw;
@@ -19,7 +20,6 @@ $size: 40vw;
         height: $size;
         background-color: #fff;
         .door {
-            transition: transform .5s;
             transform-origin: left center;
             width: 100%;
             height: 100%;
@@ -28,20 +28,11 @@ $size: 40vw;
             background-size: 100% auto;
         }
         .pencilMan {
-        	transition: opacity .5s;
             @include component();
             top: 19vh;
-            left: 16vw;
+            left: 9vw;
             width: 10.5vw;
             opacity: 0;
-        }
-    }
-    &:hover {
-        .door {
-            transform: rotateY(-45deg);
-        }
-        .pencilMan {
-            opacity: 1;
         }
     }
 }
@@ -60,13 +51,16 @@ $size: 40vw;
     top: 15vh;
     left: 65vw;
     font-size: 2vh;
-    line-height: 3.5vh;
+    // line-height: 3.5vh;
     color: #333;
+    .text {
+        display: block;
+    }
 }
 
 .gift {
     @include component();
     top: 40vh;
-    left: 61vw;
+    left: 65vw;
     height: 18vw;
 }

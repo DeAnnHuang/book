@@ -1,5 +1,5 @@
-$header: 66px;
-$footer: 10vh;
+$header: 8vh;
+$footer: 10.5vh;
 header,
 footer {
     background-color: #eee;
@@ -14,31 +14,25 @@ footer {
 header {
     top: 0;
     height: $header;
-    border-bottom: 5px solid #fff;
+    // border-bottom: 5px solid #fff;
 }
 
 footer {
     bottom: 0;
     height: $footer;
-    padding: 15px 0;
+    // padding: 15px 0;
 }
 
-// main {
-//     margin-top: $header + 5px;
-//     margin-bottom: $footer + 30px;
-// }
+
 @media screen and (max-width: 768px) {
     $footer: 70px;
     header {
         position: relative;
-        border: none;
+        // border: none;
     }
     footer {
         position: relative;
         height: $footer
     }
-    // main {
-    //     margin-top: $header;
-    //     margin-bottom: 0;
-    // }
+ 
 }
