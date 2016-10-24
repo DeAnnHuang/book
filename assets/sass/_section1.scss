@@ -1,0 +1,76 @@
+$window:52vw;
+$left:-30vw;
+.sky {
+    @include component();
+    left: 49vw;
+    width: $window - 1vw;
+    top: -25%;
+}
+
+.window {
+    @include component();
+    width: $window;
+    left: 48vw;
+    top: -10%;
+}
+
+.tablet {
+    @include component();
+    width: 43vw;
+    top: 80%;
+    left: 80%;
+}
+
+.hr {
+    @include component();
+    top: 19vh;
+    left: $left;
+    border: 0;
+    height: 5px;
+    width: 60px;
+    background-color: #ccc;
+}
+
+.title {
+    @include component();
+    top: 22vh;
+    left: $left;
+    font-size: 2.3vw;
+    line-height: 2.6vw;
+    color: #4c4c4c;
+}
+
+.content {
+    @include component();
+    top: 34vh;
+    left: $left;
+    width: 30vw;
+    color: #4366bf;
+    font-size: 1vw;
+    line-height: 1.4vw;
+}
+
+.btn {
+    @include component();
+    line-height: 1.8vw;
+    text-align: center;
+    padding: 1vw;
+    border-radius: 5px;
+    color: #fff;
+    left: $left;
+    p {
+        font-size: 1vw;
+    }
+    h1 {
+        font-size: 1.4vw;
+    }
+    &.btn1 {
+        top: 45vh;
+        @include background-image(linear-gradient(#24932f, #31a43d 50%, #289933 50%, #269631));
+    }
+    &.btn2 {
+        top: 45vh;
+        margin-left: 13vw;
+        @include background-image(linear-gradient(#278ec5, #349fd0 50%, #2b94c9 50%, #2991c7));
+    }
+}

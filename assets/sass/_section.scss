@@ -22,9 +22,14 @@
             background-color: #ddd;
             background-image: url("../img/bg1.jpg");
             background-size: 100% auto;
+            overflow: hidden;
         }
         &.three {
+            overflow: hidden;
             background-color: lightblue;
+            background-image: url("../img/bg2.jpg");
+            background-position: 0 16vh;
+            background-size: 100% auto;
         }
         &.four {
             background-color: #bbb;
