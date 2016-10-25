@@ -1,12 +1,13 @@
 .sky2 {
     @include component();
     width: 120vw;
-    clip: rect(0px, 100vw, 16vh, 0px);
+    clip: rect(0px, 120vw, 16vh, 0px);
 }
 
 .tree {
     @include component();
     top: -8vh;
+    left: -5vw;
     height: 80vh;
 }
 
@@ -21,7 +22,7 @@
     @include component();
     width: 3vw;
     top: 12vh;
-    left: 48vw;
+    left: 43vw;
 }
 
 .sun {
@@ -34,30 +35,33 @@
 .birds {
     @include component();
     width: 6vw;
-    top: 6vh;
-    left: 60vw;
+    top: -100%;
+    left: 45vw;
 }
 
 .tablet2 {
     @include component();
     width: 45vw;
-    top: 22vh;
-    left: 1vw;
+    top: 40vh;
+    left: -1vw;
+    opacity: 0;
 }
 
 .three {
-    $left: 50vw;
+    $left: 63vw;
     .hr,
     .title,
     .content,
     .btn {
         left: $left;
+        opacity: 0;
     }
     .hr {
         top: 35vh;
     }
     .title {
         top: 39vh;
+        width: 50%;
     }
     .content {
         top: 50vh;
