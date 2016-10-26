@@ -28,7 +28,7 @@ $(document).ready(function() {
     //Section
     var sectionTl = new TimelineMax();
     sectionTl
-    //0
+    	//0
         .to('.door', 1, { rotationY: '-45deg' })
         .to('.pencilMan', 0.6, { left: '16vw', autoAlpha: 1, ease: Power2.easeIn }, 0.3)
         .staggerTo('.text', 1.5, { marginLeft: '-100px', autoAlpha: 0, ease: Power2.easeIn }, -0.15)
@@ -45,18 +45,37 @@ $(document).ready(function() {
         .to('.sky', 1, { top: '0', ease: Power2.easeInOut }, '-=2')
         .to('.tablet', 1, { top: '42vh', left: '57vw', ease: Power2.easeInOut }, '-=2.1')
         .to('.sky', 5, { left: '55vw', ease: Linear.easeNone }, '-=2')
+        //cloud
+        .to('.cloud.one', 3, { left: '100%', top: '100%', ease: Power2.easeInOut }, '9')
+        .to('.cloud.two', 3, { left: '100%', top: '-100%', ease: Power2.easeInOut }, '9')
+        .to('.cloud.three', 3, { left: '-100%', top: '100%', ease: Power2.easeInOut }, '9')
+        .to('.cloud.four', 3, { left: '-100%', top: '-100%', ease: Power2.easeInOut }, '9')
         //2
-        .fromTo('.bg.three', 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone })
-        .to('.sky2', 4, { left: '-3vw', ease: Linear.easeNone })
+        .fromTo('.bg.three', 0.1, { autoAlpha: 0 }, { autoAlpha: 1, ease: Linear.easeNone }, '-=1.5')
+        .to('.sky2', 4, { left: '-3vw', ease: Linear.easeNone }, '-=1.5')
         .to('.mountain', 4, { left: '10vw', ease: Linear.easeNone }, '-=4')
         .to('.sun', 2, { rotation: '10deg', left: '28vw', ease: Linear.easeNone }, '-=4')
         .to('.sailboat', 5, { left: '75vw', ease: Linear.easeNone }, '-=4')
         .to('.birds', 5, { width: '7vw', bezier: birdsPath, ease: Linear.easeNone }, '-=4')
-        .staggerTo('.three .textGroup', 1, { left: '50vw', autoAlpha: 1, ease: Linear.easeNone }, 0.25, '-=5.5')
-        .to('.three .btn', 0.5, { left: '50vw', autoAlpha: 1, ease: Linear.easeNone }, '-=4.5')
-        .to('.tablet2', 1, { left: '1vw', top: '22vh', autoAlpha: 1, ease: Power2.easeInOut }, '-=5.5')
-        .to('.tree', 1, { left: 0, ease: Power2.easeInOut }, '-=5.5')
-        .fromTo('.bg.four', 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone })
+        .staggerTo('.three .textGroup', 1, { left: '50vw', autoAlpha: 1, ease: Linear.easeNone }, 0.25, '-=5')
+        .to('.three .btn', 0.5, { left: '50vw', autoAlpha: 1, ease: Linear.easeNone }, '-=4')
+        .to('.tablet2', 2, { left: '1vw', top: '22vh', autoAlpha: 1, ease: Power2.easeInOut }, '-=5')
+        .to('.tree', 2, { left: 0, ease: Power2.easeInOut }, '-=5')
+        .to('.dialog2', 1, { top: '29vh', autoAlpha: 1, ease: Power2.easeInOut }, '-=3')
+        //3
+        .fromTo('.bg.four', 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone }, '-=1.5')
+        .to('.rock', 5, { left: '5%', ease: Linear.easeNone }, '-=1')
+        .to('.tree3', 5, { left: '-5vw', ease: Linear.easeNone }, '-=5')
+        .to('.desertLeft', 5, { left: '-2vw', ease: Linear.easeNone }, '-=5')
+        .to('.desertRight', 5, { left: '39vw', ease: Linear.easeNone }, '-=5')
+        .to('.star', 2, { top: '0', autoAlpha: 1, ease: Power2.easeInOut }, '-=4')
+        .to('.four .hr', 1, { top: '10vh', autoAlpha: 1, ease: Power2.easeInOut }, '-=3.5')
+        .to('.four .title', 1, { top: '14vh', autoAlpha: 1, ease: Power2.easeInOut }, '-=3.5')
+        .to('.four .content', 1, { top: '26vh', autoAlpha: 1, ease: Power2.easeInOut }, '-=3.5')
+        .to(['.four .btn.one', '.four .btn.two'], 1, { top: '14vh', ease: Power2.easeInOut }, '-=3')
+        .to(['.four .btn.three', '.four .btn.four'], 1, { top: '23vh', ease: Power2.easeInOut }, '-=3')
+        .to('.compass', 4, { top: '42vh', left: '58vw', autoAlpha: 1, ease: Linear.easeNone }, '-=3.5')
+        //4
         .fromTo('.bg.five', 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone });
 
     var sectionScene = new ScrollMagic.Scene({
@@ -66,14 +85,6 @@ $(document).ready(function() {
         })
         .setPin('#section-wrap')
         .setTween(sectionTl)
-        // .addIndicators({
-        //     name: 'OBJECT',
-        //     colorTrigger: 'lightseagreen',
-        //     colorStart: 'darkorange',
-        //     colorEnd: 'darkgreen'
-        // })
         .addTo(controller);
-
-
 
 });

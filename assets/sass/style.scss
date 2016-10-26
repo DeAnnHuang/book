@@ -2,6 +2,7 @@
 @import "compass/css3";
 body {
     overflow-x: hidden;
+    font-family: 'Helvetica', 'PingFang TC', "微軟正黑體";
 }
 
 @import "headerFooter";
@@ -9,4 +10,7 @@ body {
 @import "section";
 @import "section0";
 @import "section1";
+@import "cloud";
 @import "section2";
+@import "section3";
+@import "section4";

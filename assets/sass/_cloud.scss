@@ -1,0 +1,22 @@
+.clouds {
+    .cloud {
+        @include component();
+        z-index: 9999;
+        &.one {
+            top: -100%;
+            left: -100%;
+        }
+        &.two {
+            top: 100%;
+            left: -100%;
+        }
+        &.three {
+            top: -100%;
+            left: 100%;
+        }
+        &.four {
+            top: 100%;
+            left: 100%;
+        }
+    }
+}

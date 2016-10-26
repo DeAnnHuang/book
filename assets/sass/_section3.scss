@@ -1,0 +1,79 @@
+.star {
+    @include component();
+    width: 110vw;
+    top: -60px;
+    left: -5vw;
+    opacity: 0;
+}
+
+.desertRight {
+    @include component();
+    top: 34vh;
+    left: 37vw;
+    width: 65vw;
+}
+
+.desertLeft {
+    @include component();
+    top: 32vh;
+    width: 105vw;
+}
+
+.tree3 {
+    @include component();
+    top: 16vh;
+    width: 80vw;
+}
+
+.rock {
+    @include component();
+    width: 100vw;
+    top: 68vh;
+}
+
+.compass {
+    @include component();
+    top: 62vh;
+    left: 62vw;
+    width: 30vw;
+}
+
+.four {
+    $left: 25vw;
+    .hr,
+    .title,
+    .content {
+        left: $left;
+        opacity: 0;
+    }
+    .hr {
+        top: -16vh;
+    }
+    .title {
+        top: -12vh;
+        color: #edb034;
+    }
+    .content {
+        top: 0;
+        color: #fff;
+    }
+    .btn {
+        padding: 2.3vh 2vw;
+        &.one {
+            top: -20vh;
+            left: 63vw;
+        }
+        &.two {
+            top: -20vh;
+            left: 73.2vw;
+        }
+        &.three {
+            top: -11vh;
+            left: 63vw;
+        }
+        &.four {
+            top: -11vh;
+            left: 73.2vw;
+        }
+    }
+}

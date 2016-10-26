@@ -16,6 +16,7 @@
     width: 70vw;
     top: 13.2vh;
     left: 20vw;
+    clip: rect(0px, 70vw, 2.8vh, 0px);
 }
 
 .sailboat {
@@ -47,6 +48,14 @@
     opacity: 0;
 }
 
+.dialog2 {
+    @include component();
+    top: 26vh;
+    left: 60vw;
+    width: 20vw;
+    opacity: 0;
+}
+
 .three {
     $left: 63vw;
     .hr,
@@ -57,14 +66,14 @@
         opacity: 0;
     }
     .hr {
-        top: 35vh;
+        top: 33vh;
     }
     .title {
-        top: 39vh;
+        top: 37vh;
         width: 50%;
     }
     .content {
-        top: 50vh;
+        top: 49vh;
     }
     .btn {
         top: 60vh;

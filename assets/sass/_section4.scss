@@ -1,0 +1,13 @@
+.student {
+    @include component();
+    top: 23vw;
+    left: 35vw;
+    width: 33vw;
+}
+
+.book {
+    @include component();
+    top: 20vh;
+    left: 40vw;
+    width: 30vw;
+}
