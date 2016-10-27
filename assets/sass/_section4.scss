@@ -1,13 +1,69 @@
 .student {
     @include component();
     top: 23vw;
-    left: 35vw;
+    left: 36vw;
     width: 33vw;
 }
 
 .book {
     @include component();
-    top: 20vh;
-    left: 40vw;
     width: 30vw;
+    opacity: 0;
+    &.book1 {
+        width: 20vw;
+        top: 40vh;
+        left: 35vw;
+    }
+    &.book2 {
+        width: 32vw;
+        top: 45vh;
+        left: 35vw;
+    }
+    &.book3 {
+        width: 26vw;
+        top: 66vh;
+        left: 38vw;
+    }
+    &.book4 {
+        width: 24vw;
+        top: 66vh;
+        left: 38vw;
+    }
+}
+
+.dialog4 {
+    @include component();
+    top: 1.8vh;
+    left: 47.5vw;
+    width: 20vw;
+    opacity: 0;
+}
+
+.five {
+    .hr,
+    .title,
+    .content {
+        // left: $left;
+        opacity: 0;
+    }
+    .hr {
+        top: 6vh;
+        left: 13vw;
+    }
+    .title {
+        top: 10vh;
+        left: 13vw;
+        color: #edb034;
+    }
+    .content {
+        top: 22vh;
+        left: 53vw;
+        color: #fff;
+    }
+    .btn {
+        padding: 1.8vh 4.5vw;
+        top: 30vh;
+        left: 44vw;
+        opacity: 0;
+    }
 }

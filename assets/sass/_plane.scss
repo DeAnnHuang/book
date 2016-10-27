@@ -1,0 +1,5 @@
+.plane {
+    @include component();
+    z-index: 9999;
+    width: 6vw;
+}

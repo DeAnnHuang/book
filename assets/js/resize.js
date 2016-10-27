@@ -1,4 +1,4 @@
-$(document).ready(function() {
+// $(document).ready(function() {
     var win = $(window),
         winSize = win.width();
 
@@ -16,4 +16,4 @@ $(document).ready(function() {
     });
 
 
-});
+// });
