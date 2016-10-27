@@ -50,4 +50,44 @@
             .to(all, 1, { autoAlpha: 1 });
     }
 
+
+
+
+    //=============scrollDown=============
+
+
+    var scrollDown = {
+        init: function() {
+            this.cacheDom();
+            this.setInterval(3);
+        },
+        cacheDom: function() {
+            this.$img = $('#scrollDown img');
+            this.$scrollDown = $('#scrollDown');
+        },
+        changeIcon: function() {
+            this.$img.hasClass("on") ? this.$img.removeClass("on") : this.$img.addClass("on");
+        },
+        setInterval: function(n) {
+            setInterval(this.changeIcon.bind(this), n * 1000);
+        }
+        /**
+         * [ShowWhenStop description]Show scroll down image like a tips when user stop scroll.
+         */
+        // ShowWhenStop: function() {
+
+        //     $(window).scroll(function() {
+        //         this.$scrollDown.css('display', 'none').fadeIn("slow");
+        //     });
+        // }
+
+    };
+
+    scrollDown.init();
+
+
+    //=============scrollDown=============
+
+
+
 })(jQuery);

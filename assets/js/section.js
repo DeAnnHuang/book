@@ -179,10 +179,14 @@ var sectionScene = new ScrollMagic.Scene({
 //     .to('.book4', 10, { bezier: bookPath.book4R, ease: Linear.easeNone }, 0);
 
 
-// win.on('scroll', function() {
-//     if (win.scrollTop() + win.height() == $(document).height()) {
-//         endingTl.play();
-//     }
-// })
+win.on('scroll', function() {
+    if (win.scrollTop() + win.height() == $(document).height()) {
+       $('#scrollDown img').fadeOut('slow', function() {
+           $(this).css('display','none');
+       });
+    }else{
+        $('#scrollDown img').css('display','');
+    }
+})
 
 // });

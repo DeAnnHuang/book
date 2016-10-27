@@ -81,6 +81,46 @@ var a,b=I.length;for(J={};--b>-1;)a=I[b],a&&a._lazy!==!1&&(a.render(a._lazy[0],a
             .to(all, 1, { autoAlpha: 1 });
     }
 
+
+
+
+    //=============scrollDown=============
+
+
+    var scrollDown = {
+        init: function() {
+            this.cacheDom();
+            this.setInterval(3);
+        },
+        cacheDom: function() {
+            this.$img = $('#scrollDown img');
+            this.$scrollDown = $('#scrollDown');
+        },
+        changeIcon: function() {
+            this.$img.hasClass("on") ? this.$img.removeClass("on") : this.$img.addClass("on");
+        },
+        setInterval: function(n) {
+            setInterval(this.changeIcon.bind(this), n * 1000);
+        }
+        /**
+         * [ShowWhenStop description]Show scroll down image like a tips when user stop scroll.
+         */
+        // ShowWhenStop: function() {
+
+        //     $(window).scroll(function() {
+        //         this.$scrollDown.css('display', 'none').fadeIn("slow");
+        //     });
+        // }
+
+    };
+
+    scrollDown.init();
+
+
+    //=============scrollDown=============
+
+
+
 })(jQuery);
 
 // $(document).ready(function() {
@@ -284,10 +324,14 @@ var sectionScene = new ScrollMagic.Scene({
 //     .to('.book4', 10, { bezier: bookPath.book4R, ease: Linear.easeNone }, 0);
 
 
-// win.on('scroll', function() {
-//     if (win.scrollTop() + win.height() == $(document).height()) {
-//         endingTl.play();
-//     }
-// })
+win.on('scroll', function() {
+    if (win.scrollTop() + win.height() == $(document).height()) {
+       $('#scrollDown img').fadeOut('slow', function() {
+           $(this).css('display','none');
+       });
+    }else{
+        $('#scrollDown img').css('display','');
+    }
+})
 
 // });

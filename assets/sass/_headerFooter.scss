@@ -15,14 +15,28 @@ header {
     top: 0;
     height: $header;
     // border-bottom: 5px solid #fff;
+    .logo {
+        height: 8vh;
+    }
 }
 
 footer {
     bottom: 0;
     height: $footer;
     // padding: 15px 0;
+    @include Flex(flex-start, center);
+    @include flex-direction(column);
+    p {
+        margin: 1vh 10vw;
+        color: #717071;
+        text-align: left;
+        font-size: 10px;
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+    }
 }
-
 
 @media screen and (max-width: 768px) {
     $footer: 70px;
@@ -32,7 +46,9 @@ footer {
     }
     footer {
         position: relative;
-        height: $footer
+        height: $footer;
+        p{
+            margin:5px 10px;
+        }
     }
- 
 }
