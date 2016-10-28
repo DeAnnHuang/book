@@ -124,21 +124,22 @@ var a,b=I.length;for(J={};--b>-1;)a=I[b],a&&a._lazy!==!1&&(a.render(a._lazy[0],a
 })(jQuery);
 
 // $(document).ready(function() {
-    var win = $(window),
-        winSize = win.width();
+var win = $(window),
+    winSize = win.width();
 
-    if (winSize <= 768) {
-        console.log(winSize);
-        $('main').html('<div id="mobile"><img src="http://placehold.it/640x1230" style="width:100%"></div>');
+if (winSize <= 768) {
+    console.log(winSize);
+    // $('main').html('<div id="mobile"><img src="http://placehold.it/640x1230" style="width:100%"></div>');
+    location.href = '//www.google.com';
+}
+
+win.resize(function() {
+    var winNewSize = win.width();
+    if (winNewSize != winSize) {
+        location.reload();
     }
 
-    win.resize(function() {
-        var winNewSize = win.width();
-        if (winNewSize != winSize) {
-            location.reload();
-        }
-
-    });
+});
 
 
 // });
@@ -255,6 +256,7 @@ sectionTl
     .to('.pencilMan', 0.6, { left: '9vw', autoAlpha: 0, ease: Power2.easeIn }, '-=0.3')
     .to('.door', 1, { rotationY: '0' })
     .to('.main', 3, { bezier: girlPath }, '-=0.3')
+    .set('#scrollDown', { autoAlpha: 0 },'-=2.3')
     //1
     .fromTo('.bg.two', 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone }, '-=2.3')
     .staggerFromTo('.two .textGroup', 1, { autoAlpha: 0 }, { autoAlpha: 1, left: '16vw', ease: Linear.easeNone }, 0.25, '-=2')
@@ -316,22 +318,16 @@ var sectionScene = new ScrollMagic.Scene({
     .addTo(controller);
 
 
-// var endingTl = new TimelineMax({ repeat: -1 });
-// endingTl
-//     .to('.book1', 10, { bezier: bookPath.book1R, ease: Linear.easeNone }, 0)
-//     .to('.book2', 10, { bezier: bookPath.book2R, ease: Linear.easeNone }, 0)
-//     .to('.book3', 10, { bezier: bookPath.book3R, ease: Linear.easeNone }, 0)
-//     .to('.book4', 10, { bezier: bookPath.book4R, ease: Linear.easeNone }, 0);
 
 
-win.on('scroll', function() {
-    if (win.scrollTop() + win.height() == $(document).height()) {
-       $('#scrollDown img').fadeOut('slow', function() {
-           $(this).css('display','none');
-       });
-    }else{
-        $('#scrollDown img').css('display','');
-    }
-})
+// win.on('scroll', function() {
+//     if (win.scrollTop() + win.height() == $(document).height()) {
+//         $('#scrollDown img').fadeOut('slow', function() {
+//             $(this).css('display', 'none');
+//         });
+//     } else {
+//         $('#scrollDown img').css('display', '');
+//     }
+// })
 
 // });

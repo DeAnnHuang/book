@@ -29,15 +29,24 @@
     @include transform(translate(-50%, -50%));
     z-index: 999;
     img {
-        background-color: #EC0462;
-        width: 50px;
-        height: 50px;
-        background-image: url("http://lempens-design.com/WD_IMAGES/GLOBAL/scrollDown.gif"),url("http://lempens-design.com/WD_IMAGES/GLOBAL/scrollDownHover.gif");
-        @include transition(all 0.5s cubic-bezier(.9, -0.43, .23, 1.24));
-        background-position: 0 0, 0 -50px;
+        border-radius: 50%;
+        background-color: #4d4d4d;
+        border: 2px #fff solid;
+        width: 35px;
+        height: 35px;
+        background-image: url("../img/scroll1.png"), url("../img/scroll2.png");
+        @include transition(all 0.5s cubic-bezier(.9,
+        -0.43,
+        .23,
+        1.24));
+        background-position: 0 0, 0 -35px;
         background-repeat: no-repeat;
     }
     img.on {
-        background-position: 0 50px, 0 0;
+        background-position: 0 35px, 0 0;
+    }
+    p {
+        color: #fff;
+        @include transform(translate(-23%,-70%));
     }
 }
