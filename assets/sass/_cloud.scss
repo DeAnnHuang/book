@@ -2,6 +2,7 @@
     .cloud {
         @include component();
         z-index: 9999;
+        width: 100vw;
         &.one {
             top: -100%;
             left: -100%;

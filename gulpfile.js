@@ -50,7 +50,7 @@ gulp.task('begin', ['mkdir', 'Library']);
 
 //js concat
 gulp.task('scripts', function() {
-    gulp.src([
+         gulp.src([
             "assets/Library/jquery.min.js",
             "assets/Library/TweenMax.min.js",
             "assets/Library/ScrollMagic.min.js",

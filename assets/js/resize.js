@@ -5,7 +5,7 @@ var win = $(window),
 if (winSize <= 768) {
     console.log(winSize);
     // $('main').html('<div id="mobile"><img src="http://placehold.it/640x1230" style="width:100%"></div>');
-    location.href = 'www.google.com';
+    location.href = 'http://mybook.taiwanmobile.com/ebook/store_front/activities/2016PC/Nov01/mobile.html';
 }
 
 win.resize(function() {

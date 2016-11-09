@@ -3,6 +3,7 @@
 // ScrollMagic 
 var controller = new ScrollMagic.Controller();
 
+
 var girlPath = {
     curviness: 1.25,
     // autoRotate: true,
@@ -109,24 +110,23 @@ sectionTl
     .to('.blur', 1, { left: '30vw', autoAlpha: 0, ease: Power2.easeIn }, '-=0.6')
     .to('.pencilMan', 0.6, { left: '9vw', autoAlpha: 0, ease: Power2.easeIn }, '-=0.3')
     .to('.door', 1, { rotationY: '0' })
-    .to('.main', 3, { bezier: girlPath }, '-=0.3')
-    .set('#scrollDown', { autoAlpha: 0 },'-=2.3')
+    .to('.main', 10, { bezier: girlPath }, '-=0.3')
+    .set('#scrollDown', { autoAlpha: 0 }, '-=6')
     //1
-    .fromTo('.bg.two', 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone }, '-=2.3')
-    .staggerFromTo('.two .textGroup', 1, { autoAlpha: 0 }, { autoAlpha: 1, left: '16vw', ease: Linear.easeNone }, 0.25, '-=2')
-    .fromTo('.two .btn', 0.5, { autoAlpha: 0 }, { autoAlpha: 1, left: '16vw', ease: Linear.easeNone }, '-=1')
-    .to('.window', 1, { top: '0', ease: Power2.easeInOut }, '-=2')
-    .to('.sky', 1, { top: '0', ease: Power2.easeInOut }, '-=2')
-    .to('.tablet', 1, { top: '42vh', left: '57vw', ease: Power2.easeInOut }, '-=2.1')
+    .fromTo('.bg.two', 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone }, '-=6')
+    .to(['.window','.sky'], 1, { top: '0', ease: Power2.easeInOut }, '-=6')
+    .to('.tablet', 2, { top: '42vh', left: '57vw', ease: Power2.easeInOut }, '-=5')
+    .staggerFromTo('.two .textGroup', 2, { autoAlpha: 0 }, { autoAlpha: 1, left: '16vw', ease: Linear.easeNone }, 0.4, '-=3')
+    .fromTo('.two .btn', 1, { autoAlpha: 0 }, { autoAlpha: 1, left: '16vw', ease: Linear.easeNone })
     .to('.sky', 5, { left: '55vw', ease: Linear.easeNone }, '-=2')
     //cloud
-    .to('.cloud.one', 3, { left: '100%', top: '100%', ease: Power2.easeInOut }, '9')
-    .to('.cloud.two', 3, { left: '100%', top: '-100%', ease: Power2.easeInOut }, '9')
-    .to('.cloud.three', 3, { left: '-100%', top: '100%', ease: Power2.easeInOut }, '9')
-    .to('.cloud.four', 3, { left: '-100%', top: '-100%', ease: Power2.easeInOut }, '9')
+    .to('.cloud.one', 10, { left: '100%', top: '100%', ease: Power2.easeInOut }, '16')
+    .to('.cloud.two', 10, { left: '100%', top: '-100%', ease: Power2.easeInOut }, '16')
+    .to('.cloud.three', 10, { left: '-100%', top: '100%', ease: Power2.easeInOut }, '16')
+    .to('.cloud.four', 10, { left: '-100%', top: '-100%', ease: Power2.easeInOut }, '16')
     //2
-    .fromTo('.bg.three', 0.1, { autoAlpha: 0 }, { autoAlpha: 1, ease: Linear.easeNone }, '-=1.5')
-    .to('.sky2', 4, { left: '-3vw', ease: Linear.easeNone }, '-=1.5')
+    .fromTo('.bg.three', 0.1, { autoAlpha: 0 }, { autoAlpha: 1, ease: Linear.easeNone }, '-=4.5')
+    .to('.sky2', 4, { left: '-3vw', ease: Linear.easeNone }, '-=3')
     .to('.mountain', 4, { left: '10vw', ease: Linear.easeNone }, '-=4')
     .to('.sun', 2, { rotation: '10deg', left: '28vw', ease: Linear.easeNone }, '-=4')
     .to('.sailboat', 5, { left: '75vw', ease: Linear.easeNone }, '-=4')
@@ -137,7 +137,7 @@ sectionTl
     .to('.tree', 2, { left: 0, ease: Power2.easeInOut }, '-=5')
     .to('.dialog2', 1, { top: '29vh', autoAlpha: 1, ease: Power2.easeInOut }, '-=3')
     //3
-    .fromTo('.bg.four', 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone }, '-=1.5')
+    .fromTo('.bg.four', 1.5, { y: "100%" }, { y: "0%", ease: Linear.easeNone }, '-=0.3')
     .to('.rock', 5, { left: '5%', ease: Linear.easeNone }, '-=1')
     .to('.tree3', 5, { left: '-5vw', ease: Linear.easeNone }, '-=5')
     .to('.desertLeft', 5, { left: '-2vw', ease: Linear.easeNone }, '-=5')
@@ -150,11 +150,11 @@ sectionTl
     .to(['.four .btn.three', '.four .btn.four'], 1, { top: '23vh', ease: Power2.easeInOut }, '-=3')
     .to('.compass', 4, { top: '42vh', left: '58vw', autoAlpha: 1, ease: Linear.easeNone }, '-=3.5')
     //plane
-    .fromTo('.plane', 5, { top: '-10%', left: '-20%' }, { bezier: flypath, ease: Power2.easeInOut }, '-=2')
+    .fromTo('.plane', 16, { top: '-10%', left: '-20%' }, { bezier: flypath, ease: Power2.easeInOut }, '-=2')
     //4
-    .fromTo('.bg.five', 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone }, '-=3')
-    .to('.student', 1, { top: '24vw', ease: Linear.easeNone }, '-=1.2')
-    .to('.five .textGroup', 2, { left: '38vw', autoAlpha: 1, ease: Linear.easeNone }, '-=1.2')
+    .fromTo('.bg.five', 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone }, '-=8')
+    .to('.student', 1, { top: '24vw', ease: Linear.easeNone }, '-=7')
+    .to('.five .textGroup', 2, { left: '38vw', autoAlpha: 1, ease: Linear.easeNone }, '-=2.8')
     .to('.five .btn', 1, { top: '32vh', autoAlpha: 1, ease: Linear.easeNone })
     .to('.dialog4', 1, { top: '2.8vh', autoAlpha: 1, ease: Linear.easeNone }, '-=1')
     .to('.book1', 3, { bezier: bookPath.book1, autoAlpha: 1, ease: Power2.easeInOut }, '-=0.5')
@@ -173,6 +173,27 @@ var sectionScene = new ScrollMagic.Scene({
 
 
 
+// win.scroll($.debounce(250, true, function() {
+//     console.log('SCROLLING!');
+// }));
+
+// var boolean = true;
+
+// win.scroll($.debounce(250, function() {
+//     console.log('DONE!');
+
+//     if (boolean) {
+//         scrollToEnd(win.scrollTop());
+//         boolean = !boolean;
+//     }
+
+// }));
+
+
+// function scrollToEnd(t) {
+
+//     $('body').animate({ scrollTop: t + 30 }, 300);
+// }
 
 // win.on('scroll', function() {
 //     if (win.scrollTop() + win.height() == $(document).height()) {
